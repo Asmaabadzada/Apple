@@ -1,0 +1,964 @@
+:root{ 
+    --blue: #0071e3;
+    --bggrey: #f2f2f2;
+}
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header1 {
+    background-color: #f2f2f2;
+}
+
+.container1 {
+    padding: 10px 60px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+nav menu a{
+    position: relative;
+    padding: 5px 0;
+}
+
+nav menu a::after {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 2px;
+    right: 50%;
+    bottom: 0;
+    background: #624d4d;
+    transition: .3s;
+}
+
+nav menu a:hover::after {
+    width: 100%;
+    right: 0;
+}
+
+.sideicons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.sidebar {
+    transition: 0.5s;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+}
+
+.sidebar .close {
+    padding: 16px;
+    text-align: right;
+    font-size: 24px;
+    color: black;
+}
+
+#inp {
+    display: none;
+}
+
+#inp:checked ~ .sidebar {
+    left: 0;
+}
+.sidebar{
+    padding: 20px 40px;
+    font: 1.2em/2 Arial;
+}
+.gadgets{
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    font-size: 1em;
+    text-align: center;
+    overflow-x: scroll;
+    margin-top: 8px;
+    padding: 0 15px;
+    p{
+        font-size: 0.7em;
+    }
+}
+.gadgets::-webkit-scrollbar{
+    display: none;
+}
+ 
+.new{
+    font: .6rem Arial;
+    color: #bf4800;
+}
+
+.headerbttm{
+    background: var(--bggrey);
+    padding: 20px 0 0 0;
+    
+}
+.cont{
+    text-align: center;
+}
+.pbtm{
+    font: 1.3em Arial;
+}
+
+.links{
+    display: inline-block;
+    color: var(--blue);
+    font: 1em Arial;
+    padding: 15px 0;
+}
+
+.links::after {
+    display: block;
+    content: "";
+    width: 0px;
+    height: 2.5px;
+    margin: 5px 0;
+    background: transparent;
+}
+
+.links:hover::after {
+    animation: border .4s linear forwards;
+}
+
+@keyframes border {
+    0% {
+        background: transparent;
+        width: 0;
+    }
+
+    25% {
+        background: yellow;
+        width: 25%;
+    }
+
+    50% {
+        background: linear-gradient(to right, yellow, orange);
+        width: 50%;
+    }
+
+    75% {
+        background: linear-gradient(to right, yellow, orange, green);
+        width: 75%;
+    }
+
+    100% {
+        background: linear-gradient(to right, yellow, orange, green, blue);
+        width: 100%;
+    }
+}
+
+.fa-solid{
+    padding-left: 5px;
+    color: var(--blue); 
+}
+
+#section1{
+    background: black;
+    color: white;
+    height: 100vh;
+    text-align: center;
+    padding: 40px 0;
+}
+
+section {
+    padding: 40px 0;
+}
+
+.txtcenter{
+    text-align: center;
+}
+
+.new2{
+    font-size: 0.8em;
+    color: #bf4800;
+}
+
+.ttop h6{
+    font: 400 1.1em Arial;
+    margin: 10px;
+    color: #8b887eff;
+}
+
+.titanium{
+    height: 40px;
+    padding: 15px 0;
+    background: url(../img/titanium.jpeg) center / contain no-repeat;
+}
+
+.price{
+    margin: 15px auto;
+    font-size: 0.9em;
+}
+
+.btn{
+    display: inline-block;
+    color: white;
+    font-size: 0.8em;
+    padding: 10px 25px;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    margin: 10px 0;
+    transition: all .3s;
+    background: var(--blue);
+}
+
+#section1 .btn:hover {
+    box-shadow: 3px 5px 7px rgb(172, 185, 236);
+  }
+
+.tbtm{
+    background: url('../img/titanium-mobile.jpeg') center / contain no-repeat;
+    height: 50vh;
+}
+
+.newphoria {
+    text-align: center;
+    padding: 40px 0;
+    span {
+        font-size: 0.8em;
+        color: #bf4800;
+    }
+
+    h6 {
+        font: 400 1.1em Arial;
+        margin: 10px;
+    }
+
+    h2 {
+        font: 500 1.8em / 0.8 Arial;
+        margin: 20px 0;
+    }
+
+    p {
+        margin: 15px 0;
+        font-size: 0.9em;
+    }
+
+    .btn:hover {
+        box-shadow: 3px 5px 7px #010e42;
+    }
+}
+
+.newpbtm {
+    background: url("../img/newphoria.jpeg") center/contain no-repeat;
+    height: 20vh;
+}
+
+.bggray{
+    background: #fbfbfb;
+}
+
+.love {
+    h6 {
+        font: 400 1.1em Arial;
+        margin: 10px 0;
+    }
+
+    h2 {
+        color: #1e3791;
+        font-size: 2em;
+        margin: 20px 0;
+    }
+
+    p {
+        font-size: 1.2em;
+        margin: 15px 0;
+    }
+}
+
+.lovetop div a:hover {
+    box-shadow: 3px 5px 7px #010e42;
+}
+
+.lovebtm {
+    background: url('../img/lovebg.jpeg') center / contain no-repeat;
+    height: 50vh;
+}
+
+.guidetop h4 {
+    font: 600 1.4em / 2 Arial;
+}
+
+.guidetop h2 {
+    font: 500 1.8em / 0.8 Arial;
+    margin: 20px 0;
+}
+
+.guidetop a {
+    display: inline-block;
+    background: #ffffffcc;
+    color: var(--blue);
+    margin: 10px 0;
+    padding: 8px 20px;
+    border-radius: 15px;
+    font-size: 0.8em;
+}
+
+.guidebtm {
+    background: url('../img/applebg12.jpeg') center / cover no-repeat;
+    height: 50vh;
+}
+
+.wiphone {
+    font-size: 2em;
+    margin: 20px 0;
+}
+
+.phones {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.phonecol {
+    flex: 0 1 275px;
+}
+
+.iphonesimg {
+    height: 300px;
+    padding: 0 10px;
+}
+
+.iphonetxt span {
+    font-size: 0.8em;
+    color: #bf4800;
+}
+
+.iphonesimg img:first-child {
+    width: 100%;
+    height: 85%;
+    object-fit: contain;
+    padding: 20px 0 10px 0;
+}
+
+.iphonetxt span {
+    font-size: 0.8em;
+    color: #bf4800;
+}
+
+.iphonetxt p:nth-of-type(2) {
+    margin: 10px 0;
+}
+
+.iphonetxt p:nth-of-type(3) {
+    font-size: 0.8em;
+    margin: 20px 0 0 0;
+}
+
+.phonecol hr {
+    width: 60%;
+    height: 1px;
+    margin: auto;
+    background: #000;
+}
+
+.text div {
+    padding: 20px 0;
+}
+
+.text p {
+    font: 0.7em / 2 Arial;
+    padding: 0 8px;
+}
+
+.text img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.ways {
+    font: 500 1.8em / 0.8 Arial;
+    margin: 20px 0;
+}
+
+.card {
+    background: #fff;
+    padding: 10px;
+    margin: 15px;
+
+    h5 {
+        padding: 30px;
+        font-size: 1.5em;
+    }
+
+    p {
+        color: #6e6e73;
+    }
+}
+
+.cardimg1 {
+    height: 30vh;
+    background: url('../img/savei_phone.jpg') center / contain no-repeat;
+}
+
+.cardimg2 {
+    height: 25vh;
+    background: url('../img/appleemoji.jpeg') center / contain no-repeat;
+}
+
+.cards .cardimg1 {
+    background-image: url('../img/aplepphone.jpeg');
+}
+
+.why {
+    background: #fff;
+    margin: 20px 10px;
+    padding: 30px 15px;
+
+    h2 {
+        font-size: 2em;
+        margin: 20px 0;
+    }
+}
+
+.whybtm{
+    height: 25vh;
+    background: url('../img/applebg6.jpeg') left / cover no-repeat;
+}
+
+.featured {
+    font-size: 2em;
+    margin: 20px 0;
+}
+
+.mag_air, .magic{
+    background: #fff;
+    margin: 20px 10px;
+    padding: 10px;
+
+    h2 {
+        font: 600 1.8em Arial;
+        margin: 20px 0 30px 0;
+    }
+}
+
+.magtop p {
+    max-width: 300px;
+    margin: 15px auto;
+    font: 1.1em / 1.5 Arial;
+}
+
+.magbtm {
+    background: url('../img/applephones.jpeg') center / contain no-repeat;
+    height: 30vh;
+    margin: 30px 0;
+}
+
+.airtop p {
+    font-size: 1.1em;
+    margin: 10px;
+}
+
+.airbtm {
+    background-image: url('../img/airtag__b81h4czx41yq_medium.jpg') center / contain no-repeat;
+}
+
+main{
+    background-color:#f2f2f2;
+}
+.servisler{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.servis{
+    padding: 30px 10px;
+    max-width: 340px;
+    text-align: center;
+}
+.servis p{
+    padding: 0 0 15px 0;
+}
+.servis a{
+    color:var(--blue) ;
+    font: 1em Arial;
+}
+.servis h5{
+    font: 600 1.3em Arial;
+    padding: 15px 0;
+}
+#what {
+    background: #f2f2f2;
+    text-align: center;
+}
+.container2, .container3, .container4, .container5, .container6{
+    padding: 0 3%;
+}
+.container2 h1{
+    font: bold 2em Arial;
+    margin: 20px 0;
+}
+.iphone, .switchtxt, .privacy {
+    background: #fff;
+    margin: 20px 10px;
+    padding: 10px;
+}
+.iphone a, .switch a{
+    color:var(--blue) ;
+    font: 1em Arial;
+    padding: 15px 0;
+}
+.iphone h2, .switch h2{
+    font: 500 1.8em / 0.8 Arial;
+    margin: 10px 0;
+    }
+.switch {
+    display: flex;
+    flex-direction: column;
+}
+.switchimg {
+    background: url(../img/applebg.jpeg) center / cover no-repeat;
+    margin: 10px 0;
+    height: 40vh;
+}
+.privacyimg {
+    background: url(../img/privacy.jpg) bottom / cover no-repeat;
+    margin: 10px 0;
+    height: 40vh;
+}
+.ust{
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px 0; */
+}
+#get{text-align: center;}
+#what, #get{ padding: 40px 0;}
+#get p{
+    font-size: 1.4em;
+    margin: 20px 0;
+}
+.container3 h1{
+    font-size: 2em;
+    margin: 20px 0;
+}
+.one{
+    background: #fff;
+    margin: 20px 10px;
+    padding: 20px;
+}
+.left img{
+    height: 40px;
+    background: center/contain no-repeat;
+}
+.linkler{
+    display: inline-block;
+    color: var(--blue);
+    font-size: 1em;
+    padding: 15px 0px;
+}
+.tvlogo, .musiclogo{
+    color: white;
+    font: 400 1.8em / 0.8 Arial;
+    margin: 20px 0;
+}
+.tv, .music p{color: white !important;}
+.tv, .music{
+    background-color: black;
+    margin: 30px 10px;
+    padding: 10px;
+}
+.tvimg{
+    background: url("../img/tv-_bg.png") center / cover no-repeat;
+    height: 40vh;
+    margin: 10px 0;
+}
+.musicimg{
+    background: url("../img/music_bg.jpg") center 45px/ cover no-repeat;
+    height: 40vh;
+    margin: 10px 0;
+}
+.btmdiv1, .btmdiv2, .btmdiv3{
+    display: flex;
+    flex-direction: column;
+}
+.fitnessplus, .arcade, .newsplus, .gift, .introduction{
+    background: #fff;
+    margin: 20px 10px;
+    padding: 10px;
+}
+.fitnessimg, .arcadeimg, .newsimg, .giftcardsimg {
+    margin: 10px 0;
+    height: 40vh;
+}
+.fitnessimg{background: url(../img/fitness_bg.jpg) center / cover no-repeat;}
+.fitnesstxt h2, .arcade h2, .newsplus h2, .gift h2, .introduction h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font: 500 1.8em Arial;
+    margin: 20px 0;
+}
+.arcadeimg{background: url(../img/arcade_bg.png) center / contain no-repeat;}
+.newsimg{background: url(../img/news_bg.jpeg) center -150px / cover no-repeat;}
+.giftcardsimg{background: url(../img/gift_bg.jpg) bottom / cover no-repeat;}
+.btmdiv3{
+    background: #fff;
+    margin: 20px 10px;
+    padding: 10px;
+}
+.introimg{
+    background: url(../img/research_app.jpg) center / contain no-repeat;
+    width: 100%;
+    height: 30vh;
+    margin: 30px 0;
+}
+.introduction{ text-align: center;}
+.introduction p{
+    max-width: 300px;
+    margin: 15px auto !important;
+    font: 1.1em / 1.5 Arial;
+}
+.greytxt{
+    text-align: justify;
+    font-size: 14px;
+    color: #0000007a;
+    padding: 20px 0;
+    background-color: white;
+}
+.greytxt ol {
+    padding: 0 0 30px 30px;
+  }
+.greytxt ol li{
+    list-style: auto;
+}
+.greytxt hr{
+    width: 100%;
+    margin: auto;
+    background: #0000007A;
+    height: 1px;
+}
+footer {
+    font: 0.8em;
+    color: black;
+}
+.linkbtm {
+    color: blue;
+    text-decoration: underline;
+}
+footer p {margin: 20px 0;}
+.footertop {
+    margin: 10px 0 20px 15px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+.fa-apple {
+    font-size: 1.5rem;
+    color: #000;
+}
+.footerm label{
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footerm label i{
+    transition: 2.5s;
+}
+.beshisse div{
+    border-bottom: 1px solid #dee2e6;
+}
+.footerl {
+    max-height: 0;
+    overflow: hidden;
+    line-height: 1.5em;
+    transition: ease-in .3s;
+    padding: 0 0 0 20px;
+}
+footer a{
+color: #000;
+}
+.footerl li:last-child {
+    padding: 0 0 16px 0;
+}
+#sal:checked~ul, #aw:checked~ul, #ac:checked~ul,#ent:checked~ul, #as:checked~ul, #fb:checked~ul,
+#fe:checked~ul,#fh:checked~ul,#fg:checked~ul,#firstv:checked~ul,#secondv:checked~ul {max-height: 300px;}
+
+#sal:checked~label i,#aw:checked~label i,#ac:checked~label i,#ent:checked~label i,#as:checked~label i,
+#fb:checked~label i,#fe:checked~label i,#fh:checked~label i,
+#fg:checked~label i,#firstv:checked~label i,#secondv:checked~label i {transform: rotate(180deg);}
+
+#sal,#aw,#ac,#ent,#as,#fb,#fe,#fh,#fg,#firstv,#secondv{display: none;}
+@media only screen and (min-width: 768px) {
+    .container1, .container2, .container3{
+        max-width: 1200px;
+        margin: auto;
+    }
+    nav {
+        justify-content: space-between;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .sidebar {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: transparent;
+        left: auto;
+        top: auto;
+        bottom: auto; 
+        width: auto;
+        transition: none;
+    }
+
+    .sidebar menu {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        font: 600 0.6em Arial;
+    }
+
+    .sidebar menu li {
+        list-style: none;
+    }
+
+    .sidebar menu li a {
+        text-decoration: none;
+        color: black;
+        padding: 5px 0;
+    }
+
+    #inp {
+        display: none; 
+    }
+
+    label {
+        display: none;
+    }
+    .none {
+        display: none;
+    }
+
+    .tbtm{
+        background: url('../img/titanium-pc.png') center / 60% no-repeat;
+        height: 50vh;
+    }
+
+    .newphoria h2 {
+        font-size: 2.8em;
+    }
+
+    .newpbtm {
+        height: 55vh;
+        background-size: cover;
+    }
+
+    .love h2 {
+        font-size: 3em;
+    }
+
+    .lovebtm {
+        height: 100vh;
+    }
+
+    .guide {
+        height: 100vh;
+        background: url('../img/applebg12.jpeg') center / cover no-repeat;
+        border-radius: 30px;
+        margin: 20px;
+    }
+
+    .guidetop {
+        color: #fff;
+    }
+
+    .guidetop h2 {
+        font-size: 2.8em;
+    }
+
+    .guidetop a {
+        color: #000;
+    }
+
+    .guidetop i {
+        display: none;
+    }
+
+    .guidebtm {
+        display: none;
+    }
+
+    .tour {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        text-align: left;
+    }
+
+    .wiphone {
+        font-size: 3em;
+    }
+
+    .phonecol {
+        padding: 0 10px;
+    }
+
+    .phonecol hr {
+        width: 100%;
+    }
+
+    .ways {
+        font-size: 2.8em;
+    }
+
+    .cards {
+        display: flex;
+
+        .card {
+            width: 50%;
+        }
+    }
+
+    .why {
+        height: 80vh;
+        background: url('../img/applebg6.jpeg') center / cover no-repeat;
+
+        h2 {
+            font-size: 3em;
+        }
+
+        div {
+            max-width: 500px;
+            margin: auto;
+        }
+    }
+
+    .whybtm {
+        display: none;
+    }
+
+    .featured {
+        width: 300px;
+        font-size: 3em;
+        margin: 30px auto;
+        padding: 20px;
+
+    }
+
+    .mag_air {
+        display: flex;
+        align-items: center;
+
+        h2 {
+            font-size: 2.8em;
+        }
+
+        .magtop,
+        .magbtm,
+        .airtop {
+            width: 50%;
+        }
+
+       
+    }
+    .airbtm{
+        background-image: url('../img/appleanahtarlik.jpeg');
+        order: -1;
+    }
+    .servisler{
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        justify-content: center;
+        gap: 30px 10px;
+    }
+    .iphoneimg {
+        background: url(../img/ios17.jpg) center / cover no-repeat;
+        height: 40vh;
+    }
+    .switchtxt, .privacy {width: 50%;}
+    .switch{
+        display: flex;
+        flex-direction: row;
+    }
+    .iphone h2, .switch h2{
+        font-size: 2.8em;
+    }
+    .container2 h1{ font-size: 3em;}
+    .tv, .music{ width: 50%;}
+    .tvlogo, .musiclogo h2{
+        font: 2.8em;
+    }
+    .right {
+        background: url(../img/applebg2.jpeg) center / contain no-repeat;
+        height: 40vh;
+        flex: 1;
+    }
+    .left{flex: 1;}
+    .one{
+        display: flex;
+        align-items: center;
+    }
+    .tvmusic{
+        display: flex;
+    }
+    .btmdiv1, .btmdiv2, .btmdiv3{
+        flex-direction: row;
+    }
+    .btmdiv3{
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    .fitnessplus, .arcade, .newsplus, .gift, .introduction{width: 50%;}
+    .fitnessimg, .arcadeimg{height: 50vh;}
+    .fitnesstxt h2 {font-size: 2.8em;}
+    .introimg{
+        height: 60vh;
+        width: 50%;
+    }
+    .footerm {
+        display: flex;
+    }
+    .footerm label a {
+        font-size: 1.2em;
+    }
+    .footerl {
+        max-height: 300px;
+    }
+    .beshisse {
+        width: 20%;
+    }
+    .beshisse div {
+        border-bottom: none;
+        i {
+            display: none;
+        }
+    }
+    .footerbtm {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 992px){
+    .love {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .lovetop,
+    .lovebtm {
+        width: 50%;
+    }
+
+    .cards3 {
+        display: flex;
+    }
+}
